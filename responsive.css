@@ -1,0 +1,112 @@
+@media only screen and (max-width: 800px){
+    .onlyLarge{
+        display: none !important;
+    }
+    .wrapper{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 
+        'topbar'
+        'tagbar'
+        'cont'
+        'aside'
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(0.8fr,1fr) 0.8fr 10fr 1fr;
+        margin: 0px;
+    }
+
+   .topbar{
+    grid-template-columns: minmax(8rem,100px)  minmax(50px,100px);
+   }
+
+    .cont{
+     
+        justify-content: center;
+        margin: auto;
+
+    }
+    /* .aside{
+        grid-area: aside;
+        max-width: 100%;
+        height: 100%;
+        display: grid;
+        justify-content: start;
+        align-content: center;
+        gap: 20px;
+        grid-template-rows: 100%;
+        grid-template-columns: repeat(auto-fit,minmax(max-content,1fr));
+        padding: 10px;
+
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        
+    }
+    .aside .asideItem{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding: 15px 0;
+        border-radius: 10px;
+        cursor: pointer;
+    
+    
+    } */
+
+    .aside{
+        grid-area: aside;
+        height: 100%;
+        display: grid;
+        justify-content: space-between;
+        align-content: center;
+        gap: 5px;
+        grid-template-columns: repeat(auto-fit,1fr);
+        padding: 10px;
+        width: 100%;
+        grid-auto-rows: 100%;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    
+    }
+    
+    .aside .asideItem{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        padding: 15px 0;
+        border-radius: 10px;
+        cursor: pointer;
+    
+    
+    }
+    .videoCard{
+        grid-template-rows: minmax(200px,1fr) minmax(100px,0.5fr);
+
+    }
+
+    .midTopbar{
+        display: none;
+    }
+
+}
+@media only screen and (max-width:450px){
+    .cont{
+        grid-template-columns: 100%;
+        justify-content: center;
+        margin: auto;
+
+    }
+}
+
+@media only screen and (min-width: 2000px){
+.cont{
+    margin: 0 20%;
+    justify-content: center;
+}
+.midTopbar{
+    margin: 0 50%;
+}
+
+}
